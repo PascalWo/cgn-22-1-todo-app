@@ -6,12 +6,10 @@ import TodoBoard from "./TodoBoard";
 
 type TodoCardProps ={
     todo: Todo
-    addTodo: (newTodo: Todo) => void
 }
 
-export default function ChangeStatus ({todo, addTodo}: TodoCardProps) {
+export default function ChangeStatus ({todo}: TodoCardProps) {
 
-    const [todos, setTodos] = useState<Todo[]>([]);
 
     const onClickChangeStatus = () => {
         let target = "";
@@ -26,7 +24,6 @@ export default function ChangeStatus ({todo, addTodo}: TodoCardProps) {
 
         axios.put(`/api/todo/${todo.id}`, {id: todo.id, description: todo.description, status: target})
             .then(response => response.data)
-            .then((todo) => addTodo(todo))
             .catch(console.error)
     }
 

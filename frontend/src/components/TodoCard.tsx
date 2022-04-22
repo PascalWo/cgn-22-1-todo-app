@@ -17,7 +17,7 @@ export default function TodoCard({todo}: TodoCardProps) {
             <div id={"todo-status"}>{todo.status} </div>
             <div id={"todo-desc"}>({todo.description})</div>
         </div>
-        <ChangeStatus todo={todo} addTodo={addTodo}/>
+        <ChangeStatus todo={todo}/>
     </div>
 
 
