@@ -1,0 +1,5 @@
+.todoboard {
+    display: flex;
+    flex-direction: row;
+
+}
