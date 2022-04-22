@@ -25,7 +25,6 @@ export default function AddTodo({addTodo}: AddTodoProps){
             .then(response => response.data)
             .then((todo) => addTodo(todo))
             .catch(console.error)
-        console.log(Response)
     }
 
     return(

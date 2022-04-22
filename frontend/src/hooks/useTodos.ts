@@ -13,7 +13,7 @@ export default function useTodos(){
     }, [])
 
     const addTodo= (newTodo: Todo) =>{
-        setTodos((allTodos) => [...allTodos,newTodo])
+        setTodos((allTodos: Todo[]) => [...allTodos,newTodo])
     }
     return {todos, addTodo}
 }
